@@ -1,0 +1,20 @@
+\* Slip_Ring_Cost_Min_Problem *\
+Minimize
+OBJ: 61 Model_1_to_buy + 50 Model_1_to_make + 97 Model_2_to_buy
+ + 83 Model_2_to_make + 145 Model_3_to_buy + 130 Model_3_to_make
+Subject To
+Harnessing_capacity_hours: Model_1_to_make + 2 Model_2_to_make
+ + Model_3_to_make <= 5000
+Ordered_Model_1_Volume: Model_1_to_buy + Model_1_to_make = 3000
+Ordered_Model_2_Volume: Model_2_to_buy + Model_2_to_make = 2000
+Ordered_Model_3_Volume: Model_3_to_buy + Model_3_to_make = 900
+Wiring_capacity_hours: 2 Model_1_to_make + 1.5 Model_2_to_make
+ + 3 Model_3_to_make <= 10000
+Bounds
+ Model_1_to_buy <= 3000
+ Model_1_to_make <= 3000
+ Model_2_to_buy <= 2000
+ Model_2_to_make <= 2000
+ Model_3_to_buy <= 900
+ Model_3_to_make <= 900
+End
