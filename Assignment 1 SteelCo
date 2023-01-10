@@ -1,0 +1,33 @@
+\* SteelCo_Manufacturing_Problem *\
+Minimize
+OBJ: 10 Steel_1_Produced_At_Mill_1 + 12 Steel_1_Produced_At_Mill_2
+ + 11 Steel_2_Produced_At_Mill_1 + 9 Steel_2_Produced_At_Mill_2
+ + 14 Steel_3_Produced_At_Mill_1 + 10 Steel_3_Produced_At_Mill_2
+Subject To
+Mill_1_has_200_hours_of_blast_furnace_time_available:
+ 20 Steel_1_Produced_At_Mill_1 + 22 Steel_2_Produced_At_Mill_1
+ + 28 Steel_3_Produced_At_Mill_1 <= 12000
+Mill_2_has_300_hours_of_blast_furnace_time_available:
+ 24 Steel_1_Produced_At_Mill_2 + 18 Steel_2_Produced_At_Mill_2
+ + 30 Steel_3_Produced_At_Mill_2 <= 18000
+Steel_1_Manufactured: Steel_1_Produced_At_Mill_1 + Steel_1_Produced_At_Mill_2
+ >= 400
+Steel_1_Mill_1_Non_negative_Constraint: Steel_1_Produced_At_Mill_1 >= 0
+Steel_1_Mill_2_Non_negative_Constraint: Steel_1_Produced_At_Mill_2 >= 0
+Steel_2_Manufactured: Steel_2_Produced_At_Mill_1 + Steel_2_Produced_At_Mill_2
+ >= 500
+Steel_2_Mill_1_Non_negative_Constraint: Steel_2_Produced_At_Mill_1 >= 0
+Steel_2_Mill_2_Non_negative_Constraint: Steel_2_Produced_At_Mill_2 >= 0
+Steel_2_should_not_exceed_the_combined_amount_of_Steel_1_and_Steel_3:
+ - Steel_1_Produced_At_Mill_1 - Steel_1_Produced_At_Mill_2
+ + Steel_2_Produced_At_Mill_1 + Steel_2_Produced_At_Mill_2
+ - Steel_3_Produced_At_Mill_1 - Steel_3_Produced_At_Mill_2 <= 0
+Steel_3_Manufactured: Steel_3_Produced_At_Mill_1 + Steel_3_Produced_At_Mill_2
+ >= 300
+Steel_3_Mill_1_Non_negative_Constraint: Steel_3_Produced_At_Mill_1 >= 0
+Steel_3_Mill_2_Non_negative_Constraint: Steel_3_Produced_At_Mill_2 >= 0
+Uniform_usage_of_the_two_mills: 0.1 Steel_1_Produced_At_Mill_1
+ - 0.08 Steel_1_Produced_At_Mill_2 + 0.11 Steel_2_Produced_At_Mill_1
+ - 0.06 Steel_2_Produced_At_Mill_2 + 0.14 Steel_3_Produced_At_Mill_1
+ - 0.1 Steel_3_Produced_At_Mill_2 = 0
+End
