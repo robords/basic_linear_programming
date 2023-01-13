@@ -1,0 +1,53 @@
+\* Anonymous_Company_Minimize_Costs_Problem *\
+Minimize
+OBJ: 15 Units_Produced_in_Q1_For_Same_Quarter_Sale
+ + 16.5 Units_Produced_in_Q1_and_Inventoried_for_Q2
+ + 16 Units_Produced_in_Q2_For_Same_Quarter_Sale
+ + 17.5 Units_Produced_in_Q2_and_Inventoried_for_Q3
+ + 17 Units_Produced_in_Q3_For_Same_Quarter_Sale
+ + 18.5 Units_Produced_in_Q3_and_Inventoried_for_Q4
+ + 18 Units_Produced_in_Q4_For_Same_Quarter_Sale
+Subject To
+Demand_is_anticipated_to_be_130_in_Q1:
+ Units_Produced_in_Q1_For_Same_Quarter_Sale >= 130
+Demand_is_anticipated_to_be_150_in_Q4:
+ Units_Produced_in_Q3_and_Inventoried_for_Q4
+ + Units_Produced_in_Q4_For_Same_Quarter_Sale >= 150
+Demand_is_anticipated_to_be_160_in_Q2:
+ Units_Produced_in_Q1_and_Inventoried_for_Q2
+ + Units_Produced_in_Q2_For_Same_Quarter_Sale >= 160
+Demand_is_anticipated_to_be_250_in_Q3:
+ Units_Produced_in_Q2_and_Inventoried_for_Q3
+ + Units_Produced_in_Q3_For_Same_Quarter_Sale >= 250
+The_plant_can_produce_a_maximum_of_200_units_in_Q1:
+ Units_Produced_in_Q1_For_Same_Quarter_Sale
+ + Units_Produced_in_Q1_and_Inventoried_for_Q2 <= 200
+The_plant_can_produce_a_maximum_of_200_units_in_Q2:
+ Units_Produced_in_Q2_For_Same_Quarter_Sale
+ + Units_Produced_in_Q2_and_Inventoried_for_Q3 <= 200
+The_plant_can_produce_a_maximum_of_200_units_in_Q3:
+ Units_Produced_in_Q3_For_Same_Quarter_Sale
+ + Units_Produced_in_Q3_and_Inventoried_for_Q4 <= 200
+The_plant_can_produce_a_maximum_of_200_units_in_Q4:
+ Units_Produced_in_Q4_For_Same_Quarter_Sale <= 200
+The_storage_facility_can_hold_a_maximum_of_60_units_for_Q2:
+ Units_Produced_in_Q1_and_Inventoried_for_Q2 <= 60
+The_storage_facility_can_hold_a_maximum_of_60_units_for_Q3:
+ Units_Produced_in_Q2_and_Inventoried_for_Q3 <= 60
+The_storage_facility_can_hold_a_maximum_of_60_units_for_Q4:
+ Units_Produced_in_Q3_and_Inventoried_for_Q4 <= 60
+Units_Produced_in_Q1_For_Same_Quarter_Sale_Non_negative_Constraint:
+ Units_Produced_in_Q1_For_Same_Quarter_Sale >= 0
+Units_Produced_in_Q1_and_Inventoried_for_Q2_Non_negative_Constraint:
+ Units_Produced_in_Q1_and_Inventoried_for_Q2 >= 0
+Units_Produced_in_Q2_For_Same_Quarter_Sale_Non_negative_Constraint:
+ Units_Produced_in_Q2_For_Same_Quarter_Sale >= 0
+Units_Produced_in_Q2_and_Inventoried_for_Q3_Non_negative_Constraint:
+ Units_Produced_in_Q2_and_Inventoried_for_Q3 >= 0
+Units_Produced_in_Q3_For_Same_Quarter_Sale_Non_negative_Constraint:
+ Units_Produced_in_Q3_For_Same_Quarter_Sale >= 0
+Units_Produced_in_Q3_and_Inventoried_for_Q4_Non_negative_Constraint:
+ Units_Produced_in_Q3_and_Inventoried_for_Q4 >= 0
+Units_Produced_in_Q4_For_Same_Quarter_Sale_Non_negative_Constraint:
+ Units_Produced_in_Q4_For_Same_Quarter_Sale >= 0
+End
