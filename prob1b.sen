@@ -1,0 +1,35 @@
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   1
+
+Problem:    
+Objective:  OBJ = 268.75 (MAXimum)
+
+   No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 _C1          NU      50.00000        .               -Inf        6.66667      -3.12500     133.33333 X2
+                                           3.12500      50.00000       60.00000          +Inf     300.00000 X3
+
+     2 _C2          NU      20.00000        .               -Inf       16.66667      -5.62500     250.00000 X3
+                                           5.62500      20.00000       40.90909          +Inf     386.36364 _C3
+
+     3 _C3          BS      10.62500      14.37500          -Inf        8.33333      -8.18182     181.81818 _C2
+                                            .           25.00000       13.33333      50.00000     800.00000 _C1
+
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   2
+
+Problem:    
+Objective:  OBJ = 268.75 (MAXimum)
+
+   No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 X1           NL        .           25.00000        .           -57.50000          -Inf    1562.50000 _C3
+                                         -22.50000          +Inf        2.50000      47.50000     212.50000 X3
+
+     2 X2           BS       8.12500      30.00000        .           -35.00000      13.33333     133.33333 _C1
+                                            .               +Inf        8.33333     120.00000    1000.00000 _C2
+
+     3 X3           BS       1.25000      20.00000        .                -Inf       5.00000     250.00000 _C2
+                                            .               +Inf        6.66667      45.00000     300.00000 _C1
+
+End of report
