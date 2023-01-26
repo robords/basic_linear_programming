@@ -20,26 +20,24 @@ _170_Cars_are_Needed_in_Atlanta:
  - atlanta_distributor_transport_to_mobile_distributor
  - atlanta_distributor_transport_to_richmond_distributor
  + jacksonville_port_transport_to_atlanta_distributor
- + mobile_distributor_transport_to_atlanta_distributor = 170
+ + mobile_distributor_transport_to_atlanta_distributor >= 170
 _200_cars_are_available_at_the_port_in_Newark:
- newark_port_transport_to_boston_distributor
- + newark_port_transport_to_dummy_distributor
- + newark_port_transport_to_richmond_distributor = 200
+ - newark_port_transport_to_boston_distributor
+ - newark_port_transport_to_richmond_distributor >= -200
 _300_cars_are_available_in_Jacksonville:
- jacksonville_port_transport_to_atlanta_distributor
- + jacksonville_port_transport_to_dummy_distributor
- + jacksonville_port_transport_to_mobile_distributor
- + jacksonville_port_transport_to_richmond_distributor = 300
+ - jacksonville_port_transport_to_atlanta_distributor
+ - jacksonville_port_transport_to_mobile_distributor
+ - jacksonville_port_transport_to_richmond_distributor >= -300
 _60_Cars_are_Needed_in_Columbus:
  atlanta_distributor_transport_to_columbus_distributor
  + boston_distributor_transport_to_columbus_distributor
- - columbus_distributor_transport_to_atlanta_distributor = 60
+ - columbus_distributor_transport_to_atlanta_distributor >= 60
 _70_Cars_are_Needed_in_Mobile:
  atlanta_distributor_transport_to_mobile_distributor
  + jacksonville_port_transport_to_mobile_distributor
- - mobile_distributor_transport_to_atlanta_distributor = 70
+ - mobile_distributor_transport_to_atlanta_distributor >= 70
 _80_Cars_are_Needed_in_Richmond:
  atlanta_distributor_transport_to_richmond_distributor
  + jacksonville_port_transport_to_richmond_distributor
- + newark_port_transport_to_richmond_distributor = 80
+ + newark_port_transport_to_richmond_distributor >= 80
 End
