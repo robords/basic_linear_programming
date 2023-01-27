@@ -1,0 +1,77 @@
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   1
+
+Problem:    
+Objective:  OBJ = 5.64 (MINimum)
+
+   No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 day_1_15     NL      15.00000        .           15.00000         .            -.20000       2.64000 day1_new_napkins_purchased
+                                            .20000          +Inf           +Inf          +Inf          +Inf
+
+     2 day_2_12     NL      12.00000        .           12.00000         .            -.10000       4.44000 day1_fast
+                                            .10000          +Inf           +Inf          +Inf          +Inf
+
+     3 day_3_18     NL      18.00000        .           18.00000         .            -.06000       4.56000 day1_slow
+                                            .06000          +Inf           +Inf          +Inf          +Inf
+
+     4 day_4_6      NL       6.00000        .            6.00000         .            -.06000       5.28000 day2_slow
+                                            .06000          +Inf           +Inf          +Inf          +Inf
+
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   2
+
+Problem:    
+Objective:  OBJ = 5.64 (MINimum)
+
+   No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 day1_fast    BS      12.00000        .10000        .                +Inf        .            4.44000 day_2_12
+                                            .               +Inf           -Inf        .20000       6.84000 day2_new_napkins_purchased
+
+     2 day1_new_napkins_purchased
+                    BS      15.00000        .20000        .                +Inf        .            2.64000 day_1_15
+                                            .               +Inf       15.00000          +Inf          +Inf
+
+     3 day1_slow    BS      18.00000        .06000        .                +Inf        .            4.56000 day_3_18
+                                            .               +Inf           -Inf        .10000       6.36000 day2_fast
+
+     4 day2_fast    NL        .             .10000        .                -Inf        .06000          -Inf
+                                            .04000          +Inf       18.00000          +Inf       6.36000 day1_slow
+
+     5 day2_new_napkins_purchased
+                    NL        .             .20000        .                -Inf        .10000          -Inf
+                                            .10000          +Inf       12.00000          +Inf       6.84000 day1_fast
+
+     6 day2_slow    BS       6.00000        .06000        .                +Inf        .            5.28000 day_4_6
+                                            .               +Inf           -Inf        .10000       5.88000 day3_fast
+
+     7 day3_fast    NL        .             .10000        .                -Inf        .06000          -Inf
+                                            .04000          +Inf        6.00000          +Inf       5.88000 day2_slow
+
+     8 day3_new_napkins_purchased
+                    NL        .             .20000        .                -Inf        .06000          -Inf
+                                            .14000          +Inf       18.00000          +Inf       8.16000 day1_slow
+
+     9 day3_slow    NL        .             .06000        .                -Inf        .               -Inf
+                                            .06000          +Inf           +Inf          +Inf          +Inf
+
+    10 day4_fast    NL        .             .10000        .                -Inf        .               -Inf
+                                            .10000          +Inf           +Inf          +Inf          +Inf
+
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   3
+
+Problem:    
+Objective:  OBJ = 5.64 (MINimum)
+
+   No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+    11 day4_new_napkins_purchased
+                    NL        .             .20000        .                -Inf        .06000          -Inf
+                                            .14000          +Inf        6.00000          +Inf       6.48000 day2_slow
+
+    12 day4_slow    NL        .             .06000        .                -Inf        .               -Inf
+                                            .06000          +Inf           +Inf          +Inf          +Inf
+
+End of report

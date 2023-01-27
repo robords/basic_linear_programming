@@ -15,8 +15,8 @@ Objective:  OBJ = 32540 (MAXimum)
                                             .           73.00000       72.20000     500.00000   68600.00000 Marketing_considerations_dictate_that_at_least_88_cars_be_produced
 
      3 Cars_and_trucks_take_up_type_1_machine_time
-                    NS        .             .             .                -Inf          -Inf          -Inf
-                                          50.00000        .            98.00000          +Inf   37440.00000 type_1_machines
+                    NU        .             .               -Inf       -1.60000    -400.00000   31900.00000 Marketing_considerations_dictate_that_at_least_26_trucks_be_produced
+                                         400.00000        .              .40000          +Inf   32700.00000 The_company_has_260_tons_of_steel_available
 
      4 Marketing_considerations_dictate_that_at_least_26_trucks_be_produced
                     BS      27.60000      -1.60000      26.00000       10.00000     -25.00000   31850.00000 Marketing_considerations_dictate_that_at_least_88_cars_be_produced
